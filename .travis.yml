@@ -3,6 +3,6 @@ sudo : required
 services:
   - docker
 before_install :
-  -docker build -t rupesh/docker-react -f Dockerfile.dev .
+  - docker build -t rupesh/docker-react -f Dockerfile.dev .
 script :
     - docker run -e CI=true rupesh/docker-react npm run test
