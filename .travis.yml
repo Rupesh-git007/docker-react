@@ -9,4 +9,4 @@ before_install :
   
   # To tell travis how to run test suite
   script :
-    - docker run -e CI=true rupesh/docker-react npm run start
+    - docker run -e CI=true rupesh/docker-react npm run test
