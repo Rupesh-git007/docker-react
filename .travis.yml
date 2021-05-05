@@ -1,12 +1,8 @@
 language:generic
 sudo:required
-# create container with docker running on it
 services :
   - docker
-# Build image of our project using Dockerfile.dev
 before_install :
   -docker build -t rupesh/docker-react -f Dockerfile.dev .
-  
-  # To tell travis how to run test suite
-  script :
+script :
     - docker run -e CI=true rupesh/docker-react npm run test
